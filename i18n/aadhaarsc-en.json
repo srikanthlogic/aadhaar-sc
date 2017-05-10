@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srikanth"
+		],
+		"last-updated": "2017-05-08",
+		"locale": "en",
+		"message-documentation": "qqq"
+	},
+		"aadhaar-sc-pre-count" : "It has been",
+		"aadhaar-sc-post-count" : "days since Supreme Court announced it would form Constitutional Bench for hearing Aadhaar - Privacy case.",
+		"aadhaar-sc-since" : "Since 11 Aug 2015, several cases related Aadhaar Privacy has been waiting for formation of a constitutional bench.",
+		"aadhaar-sc-cji" : "2 Chief Justices of India have retired since without forming the constitutional bench.",
+		"aadhaar-sc-delayed" : "Justice delayed is Justice denied"
+}
