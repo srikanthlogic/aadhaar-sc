@@ -111,14 +111,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.5.0/jssocials.min.js"></script>
   <script>
-    $("#shareButtonLabelCount").jsSocials({
-      url: "http://arunmozhi.in/aadhaar-sc/",
-      text: "Honorouble CJI, Please form the constitutional bench to hear Aadhaar privacy case soon. #AadhaarBench",
-      showLabel: false,
-      showCount: false,
-      shareIn: "popup",
-      shares: ["email", "twitter", "facebook", "whatsapp", "linkedin", "telegram"]
-    });
   </script>
 
   <script type="text/javascript" src="js/jquery.i18n.js"></script>
@@ -131,6 +123,7 @@
 
   <script type="text/javascript">
     var days = 0;
+
     $( document ).ready(function() {
       var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
       var announced = new Date(2015,7,11); // 0 is January for some ungodly reason
@@ -139,6 +132,15 @@
       today = moment(today);
       days = today.diff(announced, 'days');
       updateText('en');
+
+      $("#shareButtonLabelCount").jsSocials({
+        url: "http://arunmozhi.in/aadhaar-sc/",
+        text: "Day "+ days + ": Honorouble CJI, Please form the constitutional bench to hear #Aadhaar privacy case soon. #AadhaarBench",
+        showLabel: false,
+        showCount: false,
+        shareIn: "popup",
+        shares: ["email", "twitter", "facebook", "whatsapp", "linkedin", "telegram"]
+      });
     });
 
     function updateText(lang) {
