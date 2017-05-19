@@ -93,8 +93,8 @@
      <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
           <p data-i18n="aadhaar-sc-pre-count">It has been</p>
-          <h1 id="days-container"></h1>
-          <p data-i18n="aadhaar-sc-post-count">days since the Indian Supreme Court decided to set up a constitutional bench on whether and how privacy is a fundamental right in India, waiting on that to take a final decision on the Aadhaar project.
+          <h1 data-i18n="aadhaar-sc-days"></h1>
+          <p data-i18n="aadhaar-sc-post-count">since the Indian Supreme Court decided to set up a constitutional bench on whether and how privacy is a fundamental right in India, waiting on that to take a final decision on the Aadhaar project.
           </p>
           <p data-i18n="aadhaar-sc-note">Every day that we wait for the Supreme Court to form this bench to affirm the constitutional right to privacy, millions of Indians lose their rights, are excluded, coerced, and made vulnerable due to the Government’s action on Aadhaar project.
           </p>
@@ -130,15 +130,15 @@
   <script type="text/javascript" src="js/jquery.i18n.messagestore.js"></script>
 
   <script type="text/javascript">
+    var days = 0;
     $( document ).ready(function() {
       var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
       var announced = new Date(2015,7,11); // 0 is January for some ungodly reason
       var today = new Date();
-      // var diffDays = Math.round(Math.abs((jobAnnounced.getTime() - today.getTime())/(oneDay))) - 1;
       announced = moment(announced);
       today = moment(today);
-      diffDays = today.diff(announced, 'days');
-      $("#days-container").text(diffDays);
+      days = today.diff(announced, 'days');
+      updateText('en');
     });
 
     function updateText(lang) {
@@ -150,6 +150,7 @@
         $("*[data-i18n]").each(function(){
           $(this).text($.i18n($(this).data('i18n')))
         });
+        $("[data-i18n='aadhaar-sc-days']").text($.i18n('aadhaar-sc-days', days));
       });
     }
   </script>
