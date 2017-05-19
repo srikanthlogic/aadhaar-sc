@@ -55,7 +55,6 @@
     padding-bottom: 5em;
     color: #fff;
     font-family: 'Lato', sans-serif;
-    box-shadow: 3px 3px 2px #AAA;
   }
   .jumbotron > p{
     font-size: 1.2em;
@@ -73,16 +72,15 @@
   .nav > li > a {
     color: #eee;
   }
+  .nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+    background-color: #333;
+  }
   </style>
 </head>
 <body>
   <a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
 
 <div class="container">
-        <!--select id="language" name="language" class="pull-right">
-          <option value="english">English</option>
-          <option value="tamil">Tamil</option>
-        </select-->
     <ul class="nav nav-pills pull-right">
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -90,7 +88,7 @@
         </a>
         <ul id="language" class="dropdown-menu">
           <li><a href="#" onClick="updateText('en')">English</a></li>
-          <li><a href="#" onClick="updateText('ta')">Tamil</a></li>
+          <li><a href="#" onClick="updateText('ta')">தமிழ்</a></li>
         </ul>
       </li>
     </ul>
