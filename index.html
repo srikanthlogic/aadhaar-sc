@@ -133,6 +133,8 @@
       days = today.diff(announced, 'days');
       updateText('en');
 
+      $("meta[name='twitter:image:src'], meta[name='og:image']").attr("name", "https://dummyimage.com/600x400/000/fff.png&text="+days);
+
       $("#shareButtonLabelCount").jsSocials({
         url: "http://arunmozhi.in/aadhaar-sc/",
         text: "Day "+ days + ": Honorouble CJI, Please form the constitutional bench to hear #Aadhaar privacy case soon. #AadhaarBench",
