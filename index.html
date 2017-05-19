@@ -84,8 +84,8 @@
           <i class="fa fa-language"></i> Language<span class="caret"></span>
         </a>
         <ul id="language" class="dropdown-menu">
-          <li><a href="#" onClick="updateText('en')">English</a></li>
-          <li><a href="#" onClick="updateText('ta')">தமிழ்</a></li>
+          <li><a href="#en" onClick="updateText('en')">English</a></li>
+          <li><a href="#ta" onClick="updateText('ta')">தமிழ்</a></li>
         </ul>
       </li>
     </ul>
@@ -98,7 +98,7 @@
           </p>
           <p data-i18n="aadhaar-sc-note">Every day that we wait for the Supreme Court to form this bench to affirm the constitutional right to privacy, millions of Indians lose their rights, are excluded, coerced, and made vulnerable due to the Government’s action on Aadhaar project.
           </p>
-         <p id="shareButtonLabelCount"/></p>
+         <p id="shareButton"/></p>
          <p><small>#AadhaarBench</small></p>
       </div>
 
@@ -122,40 +122,52 @@
   <script type="text/javascript" src="js/jquery.i18n.messagestore.js"></script>
 
   <script type="text/javascript">
-    var days = 0;
+     var days = 0;
+     var hash = document.URL.substr(document.URL.indexOf('#')+1);
+     var lang = (typeof(hash) === "string" && hash != "") ? hash : "en";
 
-    $( document ).ready(function() {
-      var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-      var announced = new Date(2015,7,11); // 0 is January for some ungodly reason
-      var today = new Date();
-      announced = moment(announced);
-      today = moment(today);
-      days = today.diff(announced, 'days');
-      updateText('en');
+     $( document ).ready(function() {
+       var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+       var announced = new Date(2015,7,11); // 0 is January for some ungodly reason
+       var today = new Date();
+       announced = moment(announced);
+       today = moment(today);
+       days = today.diff(announced, 'days');
+       updateText(lang);
+     });
 
+    /**
+    @function
+      updateText - called from the dropdown menu on top to change the language on the page
 
-      $("#shareButtonLabelCount").jsSocials({
-        url: "http://arunmozhi.in/aadhaar-sc/",
-        text: "Day "+ days + ": Honorouble CJI, Please form the constitutional bench to hear #Aadhaar privacy case soon. #AadhaarBench",
-        showLabel: false,
-        showCount: false,
-        shareIn: "popup",
-        shares: ["email", "twitter", "facebook", "whatsapp", "linkedin", "telegram"]
-      });
-    });
-
-    function updateText(lang) {
+    @param
+      language (string) - short code of the language to change
+    **/
+    function updateText(language) {
       'use strict';
-      var i18n = $.i18n();
-      var language =  lang ? lang : $('#lang').val();
+      var i18n = $.i18n();;
+      lang = language; // update the global variable as well
+      console.log(lang);
       i18n.locale = language;
       i18n.load( 'i18n/aadhaarsc-' + $.i18n().locale + '.json', language ).done( function(){
         $("*[data-i18n]").each(function(){
           $(this).text($.i18n($(this).data('i18n')))
         });
         $("[data-i18n='aadhaar-sc-days']").text($.i18n('aadhaar-sc-days', days));
+
+        // update the share controls with the current language
+        $("#shareButton").jsSocials("destroy");
+        $("#shareButton").jsSocials({
+            url: "http://arunmozhi.in/aadhaar-sc/#"+lang,
+            text: $.i18n('aadhaar-sc-share-text', days),
+            showLabel: false,
+            showCount: false,
+            shareIn: "popup",
+            shares: ["email", "twitter", "facebook", "whatsapp", "linkedin", "telegram"]
+        });
       });
     }
+
   </script>
 
 </body>

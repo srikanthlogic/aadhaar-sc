@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": ["Srikanth", "Arunmozhi"]
+    },
+    "aadhaar-sc-pre-count" : "The text that appears before the count",
+    "aadhaar-sc-days" : "The singluar and plural form of the word 'day' and 'days'",
+    "aadhaar-sc-post-count" : "The text that should appear after the count has been displayed",
+    "aadhaar-sc-note" : "An extra note about the impact of inaction by suprem court",
+    "aadhaar-sc-share-text" : "The text that would be shared in Twitter, FB etc, when user clicks the share buttons" 
+}

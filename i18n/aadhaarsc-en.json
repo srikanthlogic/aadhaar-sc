@@ -3,7 +3,7 @@
 		"authors": [
 			"Srikanth"
 		],
-		"last-updated": "2017-05-08",
+		"last-updated": "2017-05-19",
 		"locale": "en",
 		"message-documentation": "qqq"
 	},
@@ -11,5 +11,5 @@
         "aadhaar-sc-days": "$1 {{PLURAL:$1|day|days}}",
 		"aadhaar-sc-post-count" : "since the Indian Supreme Court decided to set up a constitutional bench on whether and how privacy is a fundamental right in India, waiting on that to take a final decision on the Aadhaar project.",
 		"aadhaar-sc-note" : "Every day that we wait for the Supreme Court to form this bench to affirm the constitutional right to privacy, millions of Indians lose their rights, are excluded, coerced, and made vulnerable due to the Government’s action on Aadhaar project.",
-		"aadhaar-sc-share-text": ""
+		"aadhaar-sc-share-text": "Day $1 : Honorouble CJI, Please form the constitutional bench to hear #Aadhaar privacy case soon. #AadhaarBench"
 }
