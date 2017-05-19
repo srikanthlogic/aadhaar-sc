@@ -8,8 +8,6 @@
 		"message-documentation": "qqq"
 	},
 		"aadhaar-sc-pre-count" : "It has been",
-		"aadhaar-sc-post-count" : "days since Supreme Court announced it would form Constitutional Bench for hearing Aadhaar - Privacy case.",
-		"aadhaar-sc-since" : "Since 11 Aug 2015, several cases related Aadhaar Privacy has been waiting for formation of a constitutional bench.",
-		"aadhaar-sc-cji" : "2 Chief Justices of India have retired since without forming the constitutional bench.",
-		"aadhaar-sc-delayed" : "Justice delayed is Justice denied"
+		"aadhaar-sc-post-count" : "days since the Indian Supreme Court decided to set up a constitutional bench on whether and how privacy is a fundamental right in India, waiting on that to take a final decision on the Aadhaar project.",
+		"aadhaar-sc-note" : "Every day that we wait for the Supreme Court to form this bench to affirm the constitutional right to privacy, millions of Indians lose their rights, are excluded, coerced, and made vulnerable due to the Government’s action on Aadhaar project."
 }
