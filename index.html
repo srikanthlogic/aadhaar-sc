@@ -124,7 +124,7 @@
   <script type="text/javascript">
      var days = 0;
      var hash = document.URL.substr(document.URL.indexOf('#')+1);
-     var lang = (typeof(hash) === "string" && hash != "") ? hash : "en";
+     var lang = (typeof(hash) === "string" && hash != "" && hash.length == 2) ? hash : "en";
 
      $( document ).ready(function() {
        var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
@@ -147,7 +147,6 @@
       'use strict';
       var i18n = $.i18n();;
       lang = language; // update the global variable as well
-      console.log(lang);
       i18n.locale = language;
       i18n.load( 'i18n/aadhaarsc-' + $.i18n().locale + '.json', language ).done( function(){
         $("*[data-i18n]").each(function(){
