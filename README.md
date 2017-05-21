@@ -28,5 +28,5 @@ Clone this project, update the links and meta tags in index.html, go to settings
 
 ## Credits:
 
-Thank you [@srikanthlogic](/srikanthlogic) for the inspiration.
+Thank you [@srikanthlogic](https://github.com/srikanthlogic) for the inspiration.
 
