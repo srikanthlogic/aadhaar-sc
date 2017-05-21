@@ -4,7 +4,7 @@ Aadhaar-SC counts the number of days that has passed since the Supreme Court has
 
 Remember this scene from Zero Dark Thirty? Maya writing angrily on the glass panel of her boss pushing him to act on the information she gave, this is something like that.
 
-[[!maya.png]]
+![maya.png](https://github.com/tecoholic/aadhaar-sc/raw/master/maya.png)
 
 ## Join the push
 
